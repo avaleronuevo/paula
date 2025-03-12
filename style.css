@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
     text-align: center;
     background-color: #ffe4b5;
     margin: 0;
@@ -16,9 +16,9 @@ body {
 }
 
 .container {
-    max-width: 600px;
+	max-width: 100%;
     margin: auto;
-    background: white;
+    background: transparent;
     padding: 20px;
     border-radius: 10px;
     box-shadow: none; /* Quitar el sombreado blanco del fondo */
@@ -26,6 +26,13 @@ body {
 
 h1 {
     color: #ff4500;
+}
+
+h2 {
+    color: #1100ff;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
+    text-align: center;
+	font-size: 14px;
 }
 
 img {
@@ -79,7 +86,7 @@ button:hover {
 
 .floating-image {
     position: absolute;
-    width: 450px; /* Hacer las imágenes más grandes */
+    width: 700px; /* Hacer las imágenes más grandes */
     opacity: 0;
-    animation: moveRotate 5s linear infinite; /* Desplazarse más rápido por la pantalla */
+    animation: moveRotate 15s linear infinite; /* Desplazarse más rápido por la pantalla */
 }

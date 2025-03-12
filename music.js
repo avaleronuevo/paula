@@ -22,8 +22,11 @@ function generateFloatingImages() {
         img.style.setProperty("--x-move", `${(Math.random() - 0.5) * 400}px`);
         img.style.setProperty("--y-move", `${(Math.random() - 0.5) * 400}px`);
         img.style.setProperty("--rotation", `${(Math.random() - 0.5) * 360}deg`);
-        img.style.width = "150px";
-        img.style.height = "150px";
+
+        // Tamaño aleatorio
+        const size = Math.random() * 600 + 100; // Tamaño entre 50px y 150px
+        img.style.width = `${size}px`;
+        img.style.height = `${size}px`;
 
         container.appendChild(img);
     }
