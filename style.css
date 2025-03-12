@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 20px;
     animation: backgroundChange 10s infinite;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 @keyframes backgroundChange {
@@ -16,28 +17,32 @@ body {
 }
 
 .container {
-	max-width: 100%;
+    max-width: 100%;
     margin: auto;
     background: transparent;
     padding: 20px;
     border-radius: 10px;
     box-shadow: none; /* Quitar el sombreado blanco del fondo */
+    box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 h1 {
     color: #ff4500;
+    font-size: 6vw; /* Responsive font size */
 }
 
 h2 {
     color: #1100ff;
-	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
     text-align: center;
-	font-size: 14px;
+    font-size: 4vw; /* Responsive font size */
 }
 
 img {
     display: block;
     margin: 0 auto;
+    max-width: 100%; /* Ensure images fit within the container */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .clickable {
@@ -56,7 +61,7 @@ button {
     color: white;
     border: none;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 4vw; /* Responsive font size */
     cursor: pointer;
     border-radius: 5px;
 }
@@ -82,11 +87,23 @@ button:hover {
 
 .small-image {
     width: 50%; /* Ajustar el tamaño de arr.jpg */
+    max-width: 100%; /* Ensure it fits within the container */
 }
 
 .floating-image {
     position: absolute;
-    width: 700px; /* Hacer las imágenes más grandes */
+    width: 90vw; /* Make images responsive */
+    max-width: 700px; /* Hacer las imágenes más grandes */
     opacity: 0;
     animation: moveRotate 15s linear infinite; /* Desplazarse más rápido por la pantalla */
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px; /* Reduce padding on small screens */
+    }
+
+    button {
+        padding: 8px 16px; /* Adjust button padding for small screens */
+    }
 }
