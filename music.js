@@ -19,9 +19,11 @@ function generateFloatingImages() {
         img.style.top = `${Math.random() * 100}vh`;
 
         // Variables CSS para animación
-        img.style.setProperty("--x-move", `${(Math.random() - 0.5) * 200}px`);
-        img.style.setProperty("--y-move", `${(Math.random() - 0.5) * 200}px`);
+        img.style.setProperty("--x-move", `${(Math.random() - 0.5) * 400}px`);
+        img.style.setProperty("--y-move", `${(Math.random() - 0.5) * 400}px`);
         img.style.setProperty("--rotation", `${(Math.random() - 0.5) * 360}deg`);
+        img.style.width = "150px";
+        img.style.height = "150px";
 
         container.appendChild(img);
     }
