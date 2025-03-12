@@ -14,9 +14,9 @@ function generateFloatingImages() {
         img.src = imageSources[Math.floor(Math.random() * imageSources.length)];
         img.classList.add("floating-image");
 
-        // Posición inicial aleatoria
-        img.style.left = `${Math.random() * 100}vw`;
-        img.style.top = `${Math.random() * 100}vh`;
+        // Posición inicial aleatoria dentro de la pantalla
+        img.style.left = `${Math.random() * (window.innerWidth - 100)}px`;
+        img.style.top = `${Math.random() * (window.innerHeight - 100)}px`;
 
         // Variables CSS para animación
         img.style.setProperty("--x-move", `${(Math.random() - 0.5) * 400}px`);
@@ -24,7 +24,7 @@ function generateFloatingImages() {
         img.style.setProperty("--rotation", `${(Math.random() - 0.5) * 360}deg`);
 
         // Tamaño aleatorio
-        const size = Math.random() * 600 + 100; // Tamaño entre 50px y 150px
+        const size = Math.random() * 400 + 100; // Tamaño entre 100px y 500px
         img.style.width = `${size}px`;
         img.style.height = `${size}px`;
 
@@ -35,4 +35,5 @@ function generateFloatingImages() {
 // Llamamos a la función al cargar la página
 window.onload = function() {
     generateFloatingImages();
+    setInterval(generateFloatingImages, 5000); // Generar nuevas imágenes cada 5 segundos
 };
