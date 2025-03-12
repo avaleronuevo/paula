@@ -1,4 +1,4 @@
 function playMusic() {
-    var audio = document.getElementById("birthdaySong");
+    var audio = document.getElementById("audio");
     audio.play();
 }
